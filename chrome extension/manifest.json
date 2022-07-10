@@ -1,0 +1,28 @@
+{
+    "manifest_version" : 2,
+    "name": "hackerBackground",
+    "description": "Add a custom background to Google.com",
+    "version": "1.0" ,
+    "permission":["activeTab"],
+    "icons":{
+        "16": "/images/phantor16.png",
+        "48": "/images/phantor48.png",
+        "128": "/images/phantor128.png"
+    },
+    "browser_action":{
+        "default_popup" : "popup.html",
+        "default_icon":{
+            "16": "/images/phantor16.png",
+            "48": "/images/phantor48.png",
+            "128": "/images/phantor128.png"
+        }
+    },
+    
+    "content_scripts":[
+        {
+        "matches":["https://www.google.com/*"],
+        "css":["main.css"]
+    }]
+
+   
+}
